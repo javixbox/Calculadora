@@ -53,12 +53,15 @@ namespace WindowsFormsApplication1
                 {
                     resultado.Clear();
                 }
-                if(resul)
+                if (resultado.Text.Length == 9)
                 {
-
+                    resultado.Clear();
+                    resultado.AppendText("Err");
                 }
-
-                resultado.AppendText("1");
+                else
+                {
+                    resultado.AppendText("1");
+                }
             }
         }
 
@@ -70,8 +73,16 @@ namespace WindowsFormsApplication1
                 {
                     resultado.Clear();
                 }
+                if (resultado.Text.Length == 9)
+                {
+                    resultado.Clear();
+                    resultado.AppendText("Err");
+                }
+                else
+                {
 
-                resultado.AppendText("2");
+                    resultado.AppendText("2");
+                }
             }
         }
 
@@ -83,8 +94,15 @@ namespace WindowsFormsApplication1
                 {
                     resultado.Clear();
                 }
-
-                resultado.AppendText("3");
+                if (resultado.Text.Length == 9)
+                {
+                    resultado.Clear();
+                    resultado.AppendText("Err");
+                }
+                else
+                {
+                    resultado.AppendText("3");
+                }
             }
         }
 
@@ -96,8 +114,15 @@ namespace WindowsFormsApplication1
                 {
                     resultado.Clear();
                 }
-
-                resultado.AppendText("4");
+                if (resultado.Text.Length == 9)
+                {
+                    resultado.Clear();
+                    resultado.AppendText("Err");
+                }
+                else
+                {
+                    resultado.AppendText("4");
+                }
             }
         }
 
@@ -109,8 +134,15 @@ namespace WindowsFormsApplication1
                 {
                     resultado.Clear();
                 }
-
-                resultado.AppendText("5");
+                if (resultado.Text.Length == 9)
+                {
+                    resultado.Clear();
+                    resultado.AppendText("Err");
+                }
+                else
+                {
+                    resultado.AppendText("5");
+                }
             }
         }
 
@@ -122,8 +154,15 @@ namespace WindowsFormsApplication1
                 {
                     resultado.Clear();
                 }
-
-                resultado.AppendText("6");
+                if (resultado.Text.Length == 9)
+                {
+                    resultado.Clear();
+                    resultado.AppendText("Err");
+                }
+                else
+                {
+                    resultado.AppendText("6");
+                }
             }
         }
 
@@ -135,8 +174,15 @@ namespace WindowsFormsApplication1
                 {
                     resultado.Clear();
                 }
-
-                resultado.AppendText("7");
+                if (resultado.Text.Length == 9)
+                {
+                    resultado.Clear();
+                    resultado.AppendText("Err");
+                }
+                else
+                {
+                    resultado.AppendText("7");
+                }
             }
         }
 
@@ -148,8 +194,15 @@ namespace WindowsFormsApplication1
                 {
                     resultado.Clear();
                 }
-
-                resultado.AppendText("8");
+                if (resultado.Text.Length == 9)
+                {
+                    resultado.Clear();
+                    resultado.AppendText("Err");
+                }
+                else
+                {
+                    resultado.AppendText("8");
+                }
             }
         }
 
@@ -161,8 +214,15 @@ namespace WindowsFormsApplication1
                 {
                     resultado.Clear();
                 }
-
-                resultado.AppendText("9");
+                if (resultado.Text.Length == 9)
+                {
+                    resultado.Clear();
+                    resultado.AppendText("Err");
+                }
+                else
+                {
+                    resultado.AppendText("9");
+                }
             }
         }
 
@@ -174,8 +234,15 @@ namespace WindowsFormsApplication1
                 {
                     resultado.Clear();
                 }
-
-                resultado.AppendText("0");
+                if (resultado.Text.Length == 9)
+                {
+                    resultado.Clear();
+                    resultado.AppendText("Err");
+                }
+                else
+                {
+                    resultado.AppendText("0");
+                }
             }
         }
 
@@ -207,8 +274,16 @@ namespace WindowsFormsApplication1
             {
                 calc.setOp2(int.Parse(resultado.Text));
                 calc.Calcular();
-                resultado.Clear();
-                resultado.AppendText(calc.getResultado());
+                if (calc.getResultado().Length > 9)
+                {
+                    resultado.Clear();
+                    resultado.AppendText("Err");
+                }
+                else
+                {
+                    resultado.Clear();
+                    resultado.AppendText(calc.getResultado());
+                }
                 calc = new Calculadora(0, 0);
             }
         }
